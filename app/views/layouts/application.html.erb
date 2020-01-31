@@ -14,7 +14,8 @@
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <a class="post" href="/characters/new">投稿する</a>
+          <%= link_to "作成する",  new_character_path, class: 'post' %>
+          <%# <a class="post" href="/characters/new">投稿する</a> %>
         </div>
       <% else %>
         <div class="grid-6">
