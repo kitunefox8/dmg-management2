@@ -6,5 +6,37 @@
         <%= f.text_field :name, placeholder: "Name" %>
         <%= f.hidden_field :id %>
     </div>
+    <div>
+      <%= f.fields_for :status do |s| %>
+      <div>
+        <%= s.label :life, "Life" %>
+        <%= s.text_field :life, placeholder: "Life" %>
+      </div>
+      <div>
+        <%= s.label :move, "Move" %>
+        <%= s.text_field :move, placeholder: "Move" %>
+      </div>
+      <div>
+        <%= s.label :attack, "Attack" %>
+        <%= s.text_field :attack, placeholder: "Attack" %>
+      </div>
+      <div>
+        <%= s.label :range, "Range" %>
+        <%= s.text_field :range, placeholder: "Range" %>
+      </div>
+      <div>
+       状態
+      </div>
+      <div>
+        <%= s.label :poison, "Poison" %>
+        <%= s.text_field :poison, placeholder: "Poison" %>
+      </div>
+        <%= s.hidden_field :id %>
+      <% end %>
+    </div>
+    <div>
+      <%= f.submit "SEND" %>
+      <%= link_to "戻る", characters_path %>
+    </div>
   <% end %>
 </div>

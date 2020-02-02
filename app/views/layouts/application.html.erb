@@ -13,9 +13,16 @@
       <h1 class="grid-6"><a href="/">DmgManagement</a></h1>
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <span><%= current_user.nickname %>
+            <ul>
+              <li>
+                <%= link_to "マイページ", user_registration_path(current_user.id), class: 'post' %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
           <%= link_to "作成する",  new_character_path, class: 'post' %>
-          <%# <a class="post" href="/characters/new">投稿する</a> %>
+            
+          </span>
         </div>
       <% else %>
         <div class="grid-6">

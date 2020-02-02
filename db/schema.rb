@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_29_104620) do
+ActiveRecord::Schema.define(version: 2020_01_30_083021) do
 
   create_table "character_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,6 +23,26 @@ ActiveRecord::Schema.define(version: 2020_01_29_104620) do
 
   create_table "characters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "life"
+    t.integer "move"
+    t.integer "attack"
+    t.integer "range"
+    t.integer "poison"
+    t.integer "blood"
+    t.integer "foot"
+    t.integer "arms"
+    t.integer "faint"
+    t.integer "confusion"
+    t.integer "curse"
+    t.integer "invisible"
+    t.integer "buff"
+    t.integer "blessing"
+    t.integer "character_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
