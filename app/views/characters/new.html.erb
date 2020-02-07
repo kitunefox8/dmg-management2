@@ -1,4 +1,4 @@
-<div class="new-character">
+<div class = "new-character" >
   <%= form_with(model: @characters, local: true) do |f| %>
     <div>
       <input type="hidden" name="character[user_ids][]" value=<%="#{current_user.id}"%>>
@@ -25,11 +25,47 @@
         <%= s.text_field :range, placeholder: "Range" %>
       </div>
       <div>
-       状態
+        状態
       </div>
       <div>
         <%= s.label :poison, "Poison" %>
         <%= s.text_field :poison, placeholder: "Poison" %>
+      </div>
+      <div>
+        <%= s.label :blood, "Blood" %>
+        <%= s.text_field :blood, placeholder: "Blood" %>
+      </div>
+      <div>
+        <%= s.label :foot, "Foot" %>
+        <%= s.text_field :foot, placeholder: "Foot" %>
+      </div>
+      <div>
+        <%= s.label :arms, "Arms" %>
+        <%= s.text_field :arms, placeholder: "Arms" %>
+      </div>
+      <div>
+        <%= s.label :faint, "Faint" %>
+        <%= s.text_field :faint, placeholder: "Faint" %>
+      </div>
+      <div>
+        <%= s.label :confusion, "Confusion" %>
+        <%= s.text_field :confusion, placeholder: "Confusion" %>
+      </div>
+      <div>
+        <%= s.label :curse, "Curse" %>
+        <%= s.text_field :curse, placeholder: "Curse" %>
+      </div>
+      <div>
+        <%= s.label :invisible, "Invisible" %>
+        <%= s.text_field :invisible, placeholder: "Invisible" %>
+      </div>
+      <div>
+        <%= s.label :buff, "Buff" %>
+        <%= s.text_field :buff, placeholder: "Buff" %>
+      </div>
+      <div>
+        <%= s.label :blessing, "Blessing" %>
+        <%= s.text_field :blessing, placeholder: "Blessing" %>
       </div>
         <%= s.hidden_field :id %>
       <% end %>
