@@ -1,9 +1,8 @@
 <% if user_signed_in? %>
 <div>
   <% @characters.each do |character| %>
-  <div>
+  <div class="characters">
     <%= link_to "#{character.name}", character_path(character.id) %>
-
   </div>
   <% end %>
 </div>

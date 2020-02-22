@@ -11,66 +11,85 @@
       <div>
         <%= s.label :life, "Life" %>
         <%= s.text_field :life, placeholder: "Life", class: "life"%>
-        <button class="life_button" type="button" name="aaa"></button>
-          <%# <p> %>
-            <%# <%= s.select :life, [["---",""],["1"],["2"],["3"],["4"],["5"],["6"],["7"],["8"],["9"],["10"]] %> 
-          <%# </p> %>
-        <%# = f.select :name,, {}, class: "select-default" %>
+        <button class="life_button" type="button" name="🔽"></button>
       </div>
       <div>
         <%= s.label :move, "Move" %>
-        <%= s.text_field :move, placeholder: "Move" %>
+        <%= s.text_field :move, placeholder: "Move", class: "move"%>
+        <button class="move_button" type="button" name="🔽"></button>
       </div>
       <div>
         <%= s.label :attack, "Attack" %>
-        <%= s.text_field :attack, placeholder: "Attack" %>
+        <%= s.text_field :attack, placeholder: "Attack", class: "attack" %>
+        <button class="attack_button" type="button" name="🔽"></button>
       </div>
       <div>
         <%= s.label :range, "Range" %>
-        <%= s.text_field :range, placeholder: "Range" %>
+        <%= s.text_field :range, placeholder: "Range", class: "range" %>
+        <button class="range_button" type="button" name="🔽"></button>
       </div>
       <div>
         状態
       </div>
       <div>
         <%= s.label :poison, "Poison" %>
-        <%= s.text_field :poison, placeholder: "Poison" %>
+        <%= s.text_field :poison, placeholder: "Poison", class:"poison" %>
+        <button class="poison-minus_button" type="button" name="-"></button>
+        <button class="poison-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :blood, "Blood" %>
-        <%= s.text_field :blood, placeholder: "Blood" %>
+        <%= s.text_field :blood, placeholder: "Blood", class:"blood" %>
+        <button class="blood-minus_button" type="button" name="-"></button>
+        <button class="blood-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :foot, "Foot" %>
-        <%= s.text_field :foot, placeholder: "Foot" %>
+        <%= s.text_field :foot, placeholder: "Foot", class:"foot" %>
+        <button class="foot-minus_button" type="button" name="-"></button>
+        <button class="foot-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :arms, "Arms" %>
-        <%= s.text_field :arms, placeholder: "Arms" %>
+        <%= s.text_field :arms, placeholder: "Arms", class:"arms" %>
+        <button class="arms-minus_button" type="button" name="-"></button>
+        <button class="arms-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :faint, "Faint" %>
-        <%= s.text_field :faint, placeholder: "Faint" %>
+        <%= s.text_field :faint, placeholder: "Faint", class:"faint" %>
+        <button class="faint-minus_button" type="button" name="-"></button>
+        <button class="faint-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :confusion, "Confusion" %>
-        <%= s.text_field :confusion, placeholder: "Confusion" %>
+        <%= s.text_field :confusion, placeholder: "Confusion", class:"confusion" %>
+        <button class="confusion-minus_button" type="button" name="-"></button>
+        <button class="confusion-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :curse, "Curse" %>
-        <%= s.text_field :curse, placeholder: "Curse" %>
+        <%= s.text_field :curse, placeholder: "Curse", class:"curse" %>
+        <button class="curse-minus_button" type="button" name="-"></button>
+        <button class="curse-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :invisible, "Invisible" %>
-        <%= s.text_field :invisible, placeholder: "Invisible" %>
+        <%= s.text_field :invisible, placeholder: "Invisible", class:"invisible" %>
+        <button class="invisible-minus_button" type="button" name="-"></button>
+        <button class="invisible-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :buff, "Buff" %>
-        <%= s.text_field :buff, placeholder: "Buff" %>
+        <%= s.text_field :buff, placeholder: "Buff", class:"buff" %>
+        <button class="buff-minus_button" type="button" name="-"></button>
+        <button class="buff-plus_button" type="button" name="+"></button>
       </div>
       <div>
         <%= s.label :blessing, "Blessing" %>
-        <%= s.text_field :blessing, placeholder: "Blessing" %>
+        <%= s.text_field :blessing, placeholder: "Blessing", class:"blessing" %>
+        <button class="blessing-minus_button" type="button" name="-"></button>
+        <button class="blessing-plus_button" type="button" name="+"></button>
       </div>
         <%= s.hidden_field :id %>
       <% end %>
