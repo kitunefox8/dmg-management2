@@ -53,13 +53,15 @@ class CharactersController < ApplicationController
 
   def character_params
     params.require(:character).permit(:name, {user_ids:[]},
-      status_attributes: [:id, :life, :move, :attack, :range, :poison]
+      status_attributes: [:id, :life, :move, :attack, :range, :poison, :blood,
+        :foot, :arms, :faint, :confusion, :curse, :invisible, :buff, :blessing]
     )
   end
 
   def update_character_params
     params.require(:character).permit(:name, :id, {user_ids:[]},
-      status_attributes: [:id, :_destroy, :life, :move, :attack, :range, :poison]
+      status_attributes: [:id, :_destroy, :life, :move, :attack, :range, :poison, :blood,
+         :foot, :arms, :faint, :confusion, :curse, :invisible, :buff, :blessing]
     )
   end
 end
