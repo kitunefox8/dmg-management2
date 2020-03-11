@@ -7,10 +7,8 @@
 <%# <%= image_tag 'gettyimages-165590923-612x612.jpg', class: 'hoge' %> 
 <%# </div> %> 
 <div>
-  
   <div>
     <%= link_to "#{@characters.name}", edit_character_path(@characters.id) %>
     <%= link_to '削除',  character_path(@characters.id), method: :delete%>
   </div>
-    
 </div>

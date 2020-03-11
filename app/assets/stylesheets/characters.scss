@@ -1,3 +1,50 @@
-// Place all the styles related to the characters controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.characters-list{
+  border: solid;
+  padding: 20px 10px;
+  // list-style: none;
+  // vertical-align: text-top;
+  .characters{
+    border: solid;
+    padding: 10px;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    &__character{
+      margin: 10px 5px 10px 20px;
+    }
+    &__name {
+      list-style: none;
+    } 
+  }
+  .statuses{
+    border: solid;
+    // position: absolute;
+    padding: 10px;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    // .hp{
+    //   position: relative;
+    //   top: 0;
+    //   left: 0;
+    // }
+    &__status{
+      margin: 10px 5px 10px 5px;
+    }
+    &__life {
+      list-style: none;
+    }
+  }
+}
+
+// .clearfix {
+//   *zoom: 1;
+// }
+// .clearfix:after {
+//   content: "\0020";
+//   display: block;
+//   height: 0;
+//   clear: both;
+//   overflow: hidden;
+//   visibility: hidden;
+// }

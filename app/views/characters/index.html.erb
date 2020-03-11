@@ -1,23 +1,35 @@
 <% if user_signed_in? %>
-<div>
-  <% @characters.each do |character| %>
-  <div class="characters">
-    <%= link_to "#{character.name}", character_path(character.id) %>
+  <div class="characters-list">
+    <div class="characters">
+      <p class="characters__name">
+        Character
+      </p>
+      <ul class="characters__character clearfix">
+        <% @characters.each do |character| %>
+        <li class="characters__name">
+          <%= link_to "#{character.name}", character_path(character.id) %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="statuses">
+      <p class="statuses__hp">
+        HP
+      </p>
+      <ul class="statuses__status clearfix">
+        <% @status.each do |status| %>
+        <li class="statuses__life">
+          <%= link_to "#{status.life}", character_path(status.character_id) %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-  <% end %>
-</div>
-<div>
-  <% @status.each do |status| %>
   <div>
-    <%= link_to "#{status.life}", character_path(status.character_id) %>
+    <%= link_to "キャラ作成", new_character_path %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
   </div>
-  <% end %>
-</div>
-<div>
-  <%= link_to "キャラ作成", new_character_path %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-</div>
-<% else %>
-  <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-  <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+  <% else %>
+    <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+    <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
 <% end %>

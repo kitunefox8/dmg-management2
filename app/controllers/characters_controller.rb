@@ -2,8 +2,10 @@ class CharactersController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @characters = Character.where(params[:id]).order("created_at DESC")
-    @status = Status.where(params[:character_id]).order("created_at DESC")
+    # @characters = Character.where(params[:id]).order("created_at DESC")
+    # @status = Status.where(params[:character_id]).order("created_at DESC")
+    @characters = Character.where(params[:id]).order("created_at ASC")
+    @status = Status.where(params[:character_id]).order("created_at ASC")
   end
 
   def show
