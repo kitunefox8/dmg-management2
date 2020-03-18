@@ -1,100 +1,100 @@
-<div>
+<div class="origin">
   <%= form_with(model: @characters, local: true) do |f| %>
-    <div>
+    <div class="post-name">
       <input type="hidden" name="character[user_ids][]" value=<%="#{current_user.id}"%>>
-        <%= f.label :name, "Name"%>
+        <%= f.label :name, "Name", class: "post-status__label"%>
         <%= f.text_field :name, placeholder: "Name" %>
         <%= f.hidden_field :id %>
     </div>
     <div>
       <%= f.fields_for :status do |s| %>
-      <div>
-        <%= s.label :life, "Life" %>
+      <div class="post-status">
+        <%= s.label :life, "Life", class: "post-status__label" %>
         <%= s.text_field :life, placeholder: "Life", class: "life"%>
-        <button class="life_button" type="button" name="▼"></button>
+        <input class="life_button btn-2" type="button" value="▼">
       </div>
-      <div>
-        <%= s.label :move, "Move" %>
+      <div class="post-status">
+        <%= s.label :move, "Move",class: "post-status__label" %>
         <%= s.text_field :move, placeholder: "Move", class: "move"%>
-        <button class="move_button" type="button" name="▼"></button>
+        <input class="move_button btn-2" type="button" value="▼">
       </div>
-      <div>
-        <%= s.label :attack, "Attack" %>
+      <div class="post-status">
+        <%= s.label :attack, "Attack", class: "post-status__label" %>
         <%= s.text_field :attack, placeholder: "Attack", class: "attack" %>
-        <button class="attack_button" type="button" name="▼"></button>
+        <input class="attack_button btn-2" type="button" value="▼">
       </div>
-      <div>
-        <%= s.label :range, "Range" %>
+      <div class="post-status">
+        <%= s.label :range, "Range", class: "post-status__label" %>
         <%= s.text_field :range, placeholder: "Range", class: "range" %>
-        <button class="range_button" type="button" name="▼"></button>
+        <input class="range_button btn-2" type="button" value="▼">
       </div>
       <div>
         状態
       </div>
-      <div>
-        <%= s.label :poison, "Poison" %>
+      <div class="post-status">
+        <%= s.label :poison, "Poison", class: "post-status__label" %>
         <%= s.text_field :poison, placeholder: "Poison", class:"poison" %>
-        <button class="poison-minus_button" type="button" name="-"></button>
-        <button class="poison-plus_button" type="button" name="+"></button>
+        <input class="poison-minus_button btn-2" type="button" value="-">
+        <input class="poison-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :blood, "Blood" %>
+      <div class="post-status">
+        <%= s.label :blood, "Blood", class: "post-status__label" %>
         <%= s.text_field :blood, placeholder: "Blood", class:"blood" %>
-        <button class="blood-minus_button" type="button" name="-"></button>
-        <button class="blood-plus_button" type="button" name="+"></button>
+        <input class="blood-minus_button btn-2" type="button" value="-">
+        <input class="blood-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :foot, "Foot" %>
+      <div class="post-status">
+        <%= s.label :foot, "Foot", class: "post-status__label" %>
         <%= s.text_field :foot, placeholder: "Foot", class:"foot" %>
-        <button class="foot-minus_button" type="button" name="-"></button>
-        <button class="foot-plus_button" type="button" name="+"></button>
+        <input class="foot-minus_button btn-2" type="button" value="-">
+        <input class="foot-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :arms, "Arms" %>
+      <div class="post-status">
+        <%= s.label :arms, "Arms", class: "post-status__label" %>
         <%= s.text_field :arms, placeholder: "Arms", class:"arms" %>
-        <button class="arms-minus_button" type="button" name="-"></button>
-        <button class="arms-plus_button" type="button" name="+"></button>
+        <input class="arms-minus_button btn-2" type="button" value="-">
+        <input class="arms-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :faint, "Faint" %>
+      <div class="post-status">
+        <%= s.label :faint, "Faint", class: "post-status__label" %>
         <%= s.text_field :faint, placeholder: "Faint", class:"faint" %>
-        <button class="faint-minus_button" type="button" name="-"></button>
-        <button class="faint-plus_button" type="button" name="+"></button>
+        <input class="faint-minus_button btn-2" type="button" value="-">
+        <input class="faint-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :confusion, "Confusion" %>
+      <div class="post-status">
+        <%= s.label :confusion, "Confusion", class: "post-status__label" %>
         <%= s.text_field :confusion, placeholder: "Confusion", class:"confusion" %>
-        <button class="confusion-minus_button" type="button" name="-"></button>
-        <button class="confusion-plus_button" type="button" name="+"></button>
+        <input class="confusion-minus_button btn-2" type="button" value="-">
+        <input class="confusion-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :curse, "Curse" %>
+      <div class="post-status">
+        <%= s.label :curse, "Curse", class: "post-status__label" %>
         <%= s.text_field :curse, placeholder: "Curse", class:"curse" %>
-        <button class="curse-minus_button" type="button" name="-"></button>
-        <button class="curse-plus_button" type="button" name="+"></button>
+        <input class="curse-minus_button btn-2" type="button" value="-">
+        <input class="curse-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :invisible, "Invisible" %>
+      <div class="post-status">
+        <%= s.label :invisible, "Invisible", class: "post-status__label" %>
         <%= s.text_field :invisible, placeholder: "Invisible", class:"invisible" %>
-        <button class="invisible-minus_button" type="button" name="-"></button>
-        <button class="invisible-plus_button" type="button" name="+"></button>
+        <input class="invisible-minus_button btn-2" type="button" value="-">
+        <input class="invisible-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :buff, "Buff" %>
+      <div class="post-status">
+        <%= s.label :buff, "Buff", class: "post-status__label" %>
         <%= s.text_field :buff, placeholder: "Buff", class:"buff" %>
-        <button class="buff-minus_button" type="button" name="-"></button>
-        <button class="buff-plus_button" type="button" name="+"></button>
+        <input class="buff-minus_button btn-2" type="button" value="-">
+        <input class="buff-plus_button btn-2" type="button" value="+">
       </div>
-      <div>
-        <%= s.label :blessing, "Blessing" %>
+      <div class="post-status">
+        <%= s.label :blessing, "Blessing", class: "post-status__label" %>
         <%= s.text_field :blessing, placeholder: "Blessing", class:"blessing" %>
-        <button class="blessing-minus_button" type="button" name="-"></button>
-        <button class="blessing-plus_button" type="button" name="+"></button>
+        <input class="blessing-minus_button btn-2" type="button" value="-">
+        <input class="blessing-plus_button btn-2" type="button" value="+">
       </div>
         <%= s.hidden_field :id %>
       <% end %>
     <div>
-      <%= f.submit "UPDATE" %>
+      <%= f.submit "UPDATE", class: "btn-2" %>
       <%= link_to "戻る", characters_path %>
     </div>
   <% end %>

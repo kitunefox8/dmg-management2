@@ -1,0 +1,30 @@
+.origin{
+  margin: 5px;
+  padding: 5px;
+  .post-name{
+    margin: 5px;
+    padding: 5px;
+    margin-top: 15px;
+  }
+  .post-status{
+    margin: 5px;
+    padding: 5px;
+    &__label{
+      display: inline-block;
+      border-bottom: solid 1px;
+      width: 105px;
+      height: 20px;
+    }
+  }
+}
+.btn-2{
+  // width: 100px;
+  height: 30px;
+  vertical-align: middle;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  // &:after{
+  // content: '▼';
+  // }
+}

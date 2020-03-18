@@ -18,7 +18,7 @@
       </p>
       <ul class="statuses__status clearfix">
         <% @status.each do |status| %>
-        <li class="statuses__life">
+        <li class="statuses__hp">
           <%= link_to "#{status.life}", character_path(status.character_id) %>
         </li>
         <% end %>
@@ -26,10 +26,4 @@
     </div>
   </div>
   <div>
-    <%= link_to "キャラ作成", new_character_path %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-  </div>
-  <% else %>
-    <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-    <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
 <% end %>

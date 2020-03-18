@@ -1,10 +1,9 @@
 .characters-list{
-  border: solid;
   padding: 20px 10px;
   // list-style: none;
   // vertical-align: text-top;
   .characters{
-    border: solid;
+    border: solid 1px;
     padding: 10px;
     width: 30%;
     height: 100%;
@@ -14,10 +13,11 @@
     }
     &__name {
       list-style: none;
+      padding-bottom: 10px;
     } 
   }
   .statuses{
-    border: solid;
+    border: solid 1px;
     // position: absolute;
     padding: 10px;
     width: 30%;
@@ -29,10 +29,11 @@
     //   left: 0;
     // }
     &__status{
-      margin: 10px 5px 10px 5px;
+      margin: 10px 5px 10px 20px;
     }
-    &__life {
+    &__hp{
       list-style: none;
+      padding-bottom: 10px;
     }
   }
 }

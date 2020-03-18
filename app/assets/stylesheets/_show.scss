@@ -1,0 +1,11 @@
+.show-characters{
+  width: 30%;
+  margin: 30px;
+  &__names{
+    padding: 10px;
+    &--name{
+      padding: 10px;
+      padding-right: 20px;
+    }
+  }
+}
