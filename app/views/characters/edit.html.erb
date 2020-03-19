@@ -11,22 +11,27 @@
       <div class="post-status">
         <%= s.label :life, "Life", class: "post-status__label" %>
         <%= s.text_field :life, placeholder: "Life", class: "life"%>
-        <input class="life_button btn-2" type="button" value="▼">
+        <%# <input class="life_button btn-2" type="button" value="▼"> %>
+        <input class="life-minus_button btn-2" type="button" value="-">
+        <input class="life-plus_button btn-2" type="button" value="+">        
       </div>
       <div class="post-status">
         <%= s.label :move, "Move",class: "post-status__label" %>
         <%= s.text_field :move, placeholder: "Move", class: "move"%>
-        <input class="move_button btn-2" type="button" value="▼">
+        <input class="move-minus_button btn-2" type="button" value="-">
+        <input class="move-plus_button btn-2" type="button" value="+">        
       </div>
       <div class="post-status">
         <%= s.label :attack, "Attack", class: "post-status__label" %>
         <%= s.text_field :attack, placeholder: "Attack", class: "attack" %>
-        <input class="attack_button btn-2" type="button" value="▼">
+        <input class="attack-minus_button btn-2" type="button" value="-">
+        <input class="attack-plus_button btn-2" type="button" value="+">        
       </div>
       <div class="post-status">
         <%= s.label :range, "Range", class: "post-status__label" %>
         <%= s.text_field :range, placeholder: "Range", class: "range" %>
-        <input class="range_button btn-2" type="button" value="▼">
+        <input class="range-minus_button btn-2" type="button" value="-">
+        <input class="range-plus_button btn-2" type="button" value="+">        
       </div>
       <div>
         状態
@@ -94,8 +99,8 @@
         <%= s.hidden_field :id %>
       <% end %>
     <div>
-      <%= f.submit "UPDATE", class: "btn-2" %>
-      <%= link_to "戻る", characters_path %>
+      <%= f.submit "UPDATE", class: "btn" %>
+      <%= link_to "戻る", characters_path, class:"btn-2"%>
     </div>
   <% end %>
 </div>
