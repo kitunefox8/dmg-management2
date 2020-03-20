@@ -65,3 +65,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'compass-rails', github: 'Compass/compass-rails'
 gem 'jquery-rails'
+
+group :production do
+  gem 'pg'
+end

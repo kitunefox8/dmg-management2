@@ -47,8 +47,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: dmg-management2_production
+#   username: dmg-management2
+#   password: <%= ENV['DMG-MANAGEMENT2_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: dmg-management2_production
-  username: dmg-management2
-  password: <%= ENV['DMG-MANAGEMENT2_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
