@@ -3,9 +3,9 @@ class CharactersController < ApplicationController
 
   def index
     # @characters = Character.where(params[:id]).order("created_at DESC")
-    # @status = Status.where(params[:character_id]).order("created_at DESC")
-    @characters = Character.where(params[:id]).order("created_at ASC")
-    @status = Status.where(params[:character_id]).order("created_at ASC")
+    # @characters = Character.where(params[:id]).order("created_at ASC")
+    @characters = current_user.characters.order("created_at ASC")
+    @status = Status.where(params[:character_id]).order("created_at DESC")
   end
 
   def show
