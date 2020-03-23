@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  require 'active_record/base'
   devise_for :users
   get 'users/:id', to: 'users#show'
 
