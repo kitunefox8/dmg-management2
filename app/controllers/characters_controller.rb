@@ -1,12 +1,22 @@
 class CharactersController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  # before_action :set_params, only: [:index, :show]
+  before_action :move_to_index, except: [:show, :index]
+
 
   def index
     # @characters = Character.where(params[:id]).order("created_at DESC")
     # @characters = Character.where(params[:id]).order("created_at ASC")
-
-    @characters = current_user.characters.order("created_at ASC")
-    @status = Status.where(params[:character_id]).order("created_at DESC")
+    # @status = Status.where(params[:character_id]).order("created_at ASC")
+    # @characters = current_user.characters.order("created_at ASC")
+    # @status = current_user.characters.status.order("created_at ASC")
+    # @characters = Character.where(user_id: current_user.id).order("created_at DESC")
+    # @characters = Character.find(params[:id])
+    # @character = Character.all.order("created_at ASC")
+    # @characters = current_user.characters.order("created_at ASC")
+    if user_signed_in?
+      @characters = current_user.characters.order("created_at ASC")
+    else
+    end
   end
 
   def show
@@ -20,7 +30,7 @@ class CharactersController < ApplicationController
 
   def create
     @characters = Character.new(character_params)
-    # # binding.pry
+    
     if @characters.save
       redirect_to characters_path
     else
@@ -52,8 +62,14 @@ class CharactersController < ApplicationController
   private
   def move_to_index
     redirect_to action: :index unless user_signed_in?
+    # @characters = Character.where(params[:id]).order("created_at ASC")
+  end
+  def set_params
+  #   @characters = Character.find(params[:id])
+    @characters = Character.where(params[:id]).order("created_at ASC")
   end
 
+  
   def character_params
     params.require(:character).permit(:name, {user_ids:[]},
       status_attributes: [:id, :life, :move, :attack, :range, :poison, :blood,

@@ -33,7 +33,7 @@
             <ul>
               <li>
                 <%# <%= link_to "マイページ", user_registration_path(current_user.id), class: 'post' %> 
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                <%= link_to "ログアウト",  users_sign_out_path, method: :delete %>
               </li>
             </ul>
           </span>

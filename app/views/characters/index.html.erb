@@ -1,29 +1,31 @@
-<% if user_signed_in? %>
-  <div class="characters-list">
-    <div class="characters">
-      <p class="characters__name">
-        Character
-      </p>
-      <ul class="characters__character clearfix">
-        <% @characters.each do |character| %>
-        <li class="characters__name">
-          <%= link_to "#{character.name}", character_path(character.id) %>
-        </li>
-        <% end %>
-      </ul>
+  <% if user_signed_in?  %>
+    <div class="characters-list">
+      <div class="characters">
+        <p class="characters__name">
+          Character
+        </p>
+        <ul class="characters__character clearfix">
+          <% @characters.each do |character| %>
+          <li class="characters__name">
+            <%= link_to "#{character.name}", character_path(character.id) %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="statuses">
+        <p class="statuses__hp">
+          HP
+        </p>
+        <ul class="statuses__status clearfix">
+          <% @characters.each do |character| %>
+          <li class="statuses__hp">
+            <%= link_to "#{character.status.life}", character_path(character.id) %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-    <div class="statuses">
-      <p class="statuses__hp">
-        HP
-      </p>
-      <ul class="statuses__status clearfix">
-        <% @status.each do |status| %>
-        <li class="statuses__hp">
-          <%= link_to "#{status.life}", character_path(status.character_id) %>
-        </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
+
   <div>
-<% end %>
+  <% else %>
+  <% end %>
