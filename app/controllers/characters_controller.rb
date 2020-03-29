@@ -64,10 +64,10 @@ class CharactersController < ApplicationController
     redirect_to action: :index unless user_signed_in?
     # @characters = Character.where(params[:id]).order("created_at ASC")
   end
-  def set_params
-  #   @characters = Character.find(params[:id])
-    @characters = Character.where(params[:id]).order("created_at ASC")
-  end
+  # def set_params
+  # #   @characters = Character.find(params[:id])
+  #   @characters = Character.where(params[:id]).order("created_at ASC")
+  # end
 
   
   def character_params
