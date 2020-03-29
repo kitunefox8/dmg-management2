@@ -45,5 +45,5 @@ Things you may want to cover:
 編集をしたらUPDATEボタンを押すと編集が確定されます
 
 以上  
-
+* ライセンス  
 [MIT](LICENSE)
