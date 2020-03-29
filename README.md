@@ -46,3 +46,4 @@ Things you may want to cover:
 
 以上
 [MIT](https://github.com/kitunefox8/dmg-management2/blob/master/LICENSE)
+[mit](LICENSE)
